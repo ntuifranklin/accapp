@@ -2,8 +2,6 @@
     <h1>List Of Transactions</h1>
 
     <% console.log(`Transactions Length : ${transactions.length}`) ;%>
-
-
     <% for(var i = 0 ; i < transactions.length; i++ ) { %>
         <% var transaction = transactions[i] ; %>
         <% var t = JSON.parse(JSON.stringify(transaction)); %>
@@ -20,6 +18,7 @@
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">Routing No: <%= t.routingNumber %></li>
                       <li class="list-group-item">Account No: <%= t.accountNumber %></li>
+                      <li class="list-group-item">Transaction Type: <%= t.transactionType %></li>
                     </ul>
                     <div class="card-footer">
                         Transaction Amount: <%= t.amount %>

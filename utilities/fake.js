@@ -25,6 +25,7 @@ class FakeData {
                 "accountNumber" : faker.finance.accountNumber(),
                 "accountName" : faker.finance.accountName(),
                 "amount":faker.finance.amount({symbol:'$', autoFormat:true}),
+                "transactionType":faker.finance.transactionType(),
 
             });
             i++;
