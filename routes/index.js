@@ -7,10 +7,10 @@ module.exports = () => {
 
     router.get('/', async(request, response) => {
         const fakeData = new FakeData();
-        const transactions = await fakeData.getTransactions(10);
+        const transactions = await fakeData.getTransactions(100);
         response.render('layout', {
             template: 'index',
-            page_title: 'Hi There! Accounting App',
+            page_title: "AccApp: The World's Best Accounting App",
             transactions: transactions,
         });
 

@@ -21,13 +21,18 @@ class FakeData {
         var i = 0 ;
         while (i < M) {
             transactions.push({
+                "date":faker.date.past(),
                 "routingNumber": faker.finance.routingNumber(),
                 "accountNumber" : faker.finance.accountNumber(),
                 "accountName" : faker.finance.accountName(),
                 "amount":faker.finance.amount({symbol:'$', autoFormat:true}),
-                "transactionType":faker.finance.transactionType(),
+                "type":faker.finance.transactionType(),
+                "description": faker.finance.transactionDescription(),
+                "transactionID": faker.number.int({ min: 10000, max: 99999 }),
+                "bankName": faker.company.name() + " Bank",
 
             });
+            //console.log(`${transactions[i].type}`);
             i++;
         };
 
