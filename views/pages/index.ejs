@@ -1,0 +1,35 @@
+
+    <h1>List Of Transactions</h1>
+
+    <% console.log(`Transactions Length : ${transactions.length}`) ;%>
+
+
+    <% for(var i = 0 ; i < transactions.length; i++ ) { %>
+        <% var transaction = transactions[i] ; %>
+        <% var t = JSON.parse(JSON.stringify(transaction)); %>
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-evenly">
+                <div class="card">
+                    <div class="card-header">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Account Name: <%= t.accountName %>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Routing No: <%= t.routingNumber %></li>
+                      <li class="list-group-item">Account No: <%= t.accountNumber %></li>
+                    </ul>
+                    <div class="card-footer">
+                        Transaction Amount: <%= t.amount %>
+                    </div>            
+                </div>
+            </div>
+
+        </div>
+       
+
+
+    <% } %>
+  
